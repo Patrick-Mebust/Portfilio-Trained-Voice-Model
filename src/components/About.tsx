@@ -64,6 +64,30 @@ const SkillItem = styled.span`
   }
 `;
 
+const CertificationsList = styled(motion.div)`
+  margin-top: 30px;
+`;
+
+const CertificationTitle = styled.h3`
+  color: #ccd6f6;
+  font-size: 20px;
+  margin-bottom: 15px;
+`;
+
+const CertificationItem = styled.span`
+  color: #8892b0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  &::before {
+    content: '✓';
+    margin-right: 10px;
+    color: #64ffda;
+  }
+`;
+
 const AboutImage = styled(motion.div)`
   position: relative;
   width: 100%;
@@ -124,23 +148,47 @@ const About: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <p>
-            Hello! I'm [Your Name], a passionate software developer with a strong
-            focus on creating beautiful and functional web applications. My journey
-            in web development started [X] years ago, and I've been hooked ever since.
+            Based in Nashville, I'm an AI Cloud Engineer specializing in building high-performance, 
+            scalable cloud infrastructure for demanding AI workloads. At NephoX, I architect 
+            cloud-native AI solutions leveraging container orchestration, real-time data ingestion, 
+            and automated pipelines to accelerate model training and deployment while optimizing 
+            costs and ensuring robust security.
           </p>
           <p>
-            I specialize in building modern web applications using technologies like
-            React, TypeScript, and Node.js. I'm always eager to learn new technologies
-            and improve my skills to create better user experiences.
+            My background includes significant experience designing complex infrastructure solutions 
+            at Dell, utilizing technologies like VxRail, PowerFlex, PowerStore, and APEX, integrated 
+            with cloud services like AWS and Azure. I guide enterprise clients through critical 
+            decisions on high availability, disaster recovery, and cloud cost optimization, 
+            translating technical capabilities into clear business value.
           </p>
-          <p>Here are a few technologies I've been working with recently:</p>
+          <p>
+            I thrive on bridging the gap between cutting-edge AI/ML possibilities and the 
+            practicalities of cloud engineering and technical sales. My passion lies in 
+            transforming complex data challenges into actionable insights at cloud speed, 
+            enabled by resilient and efficient infrastructure.
+          </p>
+
+          <CertificationsList>
+            <CertificationTitle>Certifications</CertificationTitle>
+            <CertificationItem>Microsoft Azure: AI Cloud Apps Builder</CertificationItem>
+            <CertificationItem>AWS Cloud Technical Essentials</CertificationItem>
+            <CertificationItem>Google Cloud Fundamentals</CertificationItem>
+            <CertificationItem>Google API Design & Security</CertificationItem>
+            <CertificationItem>Vanderbilt: AI Agents & Generative AI with Python</CertificationItem>
+          </CertificationsList>
+
+          <p>Technical Skills:</p>
           <SkillsList>
-            <SkillItem>JavaScript (ES6+)</SkillItem>
-            <SkillItem>TypeScript</SkillItem>
-            <SkillItem>React</SkillItem>
-            <SkillItem>Node.js</SkillItem>
-            <SkillItem>HTML & CSS</SkillItem>
-            <SkillItem>Git</SkillItem>
+            <SkillItem>MLOps Pipelines (MLflow, Cubeflow, Vertex AI, SageMaker)</SkillItem>
+            <SkillItem>Foundation Models (V-JEPA, OpenAI, Anthropic, Vertex AI, Bedrock)</SkillItem>
+            <SkillItem>LLMOps Tools (LangChain, LlamaIndex)</SkillItem>
+            <SkillItem>Cloud Platforms (AWS, Azure, GCP, VCF)</SkillItem>
+            <SkillItem>IaC & Automation (Terraform, Ansible, CI/CD)</SkillItem>
+            <SkillItem>AI/ML Infrastructure (GPU Clusters, Data Lakes)</SkillItem>
+            <SkillItem>Vector Search & RAG (Qdran, Vespa)</SkillItem>
+            <SkillItem>High Availability Systems</SkillItem>
+            <SkillItem>Disaster Recovery</SkillItem>
+            <SkillItem>Cost Optimization</SkillItem>
           </SkillsList>
         </AboutText>
         <AboutImage
@@ -150,7 +198,7 @@ const About: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <ImageWrapper>
-            <Image src="/path-to-your-image.jpg" alt="Your Name" />
+            <Image src="/path-to-your-image.jpg" alt="Patrick Mebust" />
           </ImageWrapper>
         </AboutImage>
       </AboutContent>
