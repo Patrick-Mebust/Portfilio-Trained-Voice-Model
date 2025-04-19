@@ -4,14 +4,38 @@ import { motion } from 'framer-motion';
 
 const ProjectsSection = styled.section`
   padding: 100px 0;
+  position: relative;
+  z-index: 1;
+`;
+
+const BackgroundContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 25, 47, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+`;
+
+const ContentContainer = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 `;
 
 const SectionTitle = styled(motion.h2)`
   font-size: 32px;
-  color: #ccd6f6;
+  color: #ffffff;
   margin-bottom: 50px;
   position: relative;
   display: inline-block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  letter-spacing: 1px;
 
   &::after {
     content: '';
@@ -21,6 +45,7 @@ const SectionTitle = styled(motion.h2)`
     width: 100px;
     height: 2px;
     background-color: #64ffda;
+    box-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
   }
 `;
 
@@ -113,42 +138,45 @@ const Projects: React.FC = () => {
 
   return (
     <ProjectsSection id="projects">
-      <SectionTitle
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        Projects
-      </SectionTitle>
-      <ProjectsGrid>
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <ProjectImage />
-            <ProjectTitle>{project.title}</ProjectTitle>
-            <ProjectDescription>{project.description}</ProjectDescription>
-            <TechStack>
-              {project.tech.map((tech, techIndex) => (
-                <TechItem key={techIndex}>{tech}</TechItem>
-              ))}
-            </TechStack>
-            <ProjectLinks>
-              <ProjectLink href={project.github} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </ProjectLink>
-              <ProjectLink href={project.live} target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </ProjectLink>
-            </ProjectLinks>
-          </ProjectCard>
-        ))}
-      </ProjectsGrid>
+      <BackgroundContainer />
+      <ContentContainer>
+        <SectionTitle
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Projects
+        </SectionTitle>
+        <ProjectsGrid>
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ProjectImage />
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <ProjectDescription>{project.description}</ProjectDescription>
+              <TechStack>
+                {project.tech.map((tech, techIndex) => (
+                  <TechItem key={techIndex}>{tech}</TechItem>
+                ))}
+              </TechStack>
+              <ProjectLinks>
+                <ProjectLink href={project.github} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </ProjectLink>
+                <ProjectLink href={project.live} target="_blank" rel="noopener noreferrer">
+                  Live Demo
+                </ProjectLink>
+              </ProjectLinks>
+            </ProjectCard>
+          ))}
+        </ProjectsGrid>
+      </ContentContainer>
     </ProjectsSection>
   );
 };
