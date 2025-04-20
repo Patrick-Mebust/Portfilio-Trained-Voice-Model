@@ -61,7 +61,7 @@ const HeroContent = styled.div`
 
 const Greeting = styled(motion.h1)`
   color: #64ffda;
-  font-size: 18px;
+  font-size: 54px;
   margin-bottom: 20px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   font-weight: 600;

@@ -131,19 +131,6 @@ const AboutImage = styled(motion.div)`
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #64ffda;
-    border-radius: 4px;
-    z-index: -1;
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
-  }
 `;
 
 const ImageWrapper = styled.div`
@@ -153,6 +140,14 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  background: rgba(2, 12, 27, 0.7);
+  border: 2px solid rgba(100, 255, 218, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #64ffda;
+    box-shadow: 0 20px 40px -20px rgba(100, 255, 218, 0.3);
+  }
 `;
 
 const Image = styled.img`
