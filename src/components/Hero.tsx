@@ -57,45 +57,48 @@ const HeroContent = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
+  padding-top: 100px;
 `;
 
 const Greeting = styled(motion.h1)`
   color: #64ffda;
-  font-size: 54px;
-  margin-bottom: 20px;
+  font-size: 108px;
+  margin-bottom: 40px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   font-weight: 600;
   letter-spacing: 1px;
 `;
 
 const Name = styled(motion.h2)`
-  font-size: 80px;
+  font-size: 160px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   letter-spacing: 1px;
+  line-height: 1.2;
 
   @media (max-width: 768px) {
-    font-size: 50px;
+    font-size: 100px;
   }
 `;
 
 const Title = styled(motion.h3)`
-  font-size: 60px;
+  font-size: 120px;
   color: #e6f1ff;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   font-weight: 600;
   letter-spacing: 1px;
+  line-height: 1.2;
 
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 80px;
   }
 `;
 
 const Description = styled(motion.p)`
-  font-size: 20px;
+  font-size: 40px;
   color: #ffffff;
   max-width: 600px;
   line-height: 1.6;
@@ -113,7 +116,7 @@ const ContactButton = styled(motion.a)`
   border: 2px solid #64ffda;
   border-radius: 4px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 32px;
   transition: all 0.3s ease;
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);

@@ -28,7 +28,7 @@ const ContentContainer = styled.div`
 `;
 
 const SectionTitle = styled(motion.h2)`
-  font-size: 32px;
+  font-size: 64px;
   color: #ffffff;
   margin-bottom: 50px;
   position: relative;
@@ -61,7 +61,7 @@ const AboutContent = styled.div`
 
 const AboutText = styled(motion.div)`
   color: #ffffff;
-  font-size: 18px;
+  font-size: 36px;
   line-height: 1.6;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   letter-spacing: 0.5px;
@@ -81,7 +81,7 @@ const SkillsList = styled(motion.div)`
 
 const SkillItem = styled.span`
   color: #64ffda;
-  font-size: 16px;
+  font-size: 32px;
   display: flex;
   align-items: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
@@ -101,7 +101,7 @@ const CertificationsList = styled(motion.div)`
 
 const CertificationTitle = styled.h3`
   color: #e6f1ff;
-  font-size: 20px;
+  font-size: 40px;
   margin-bottom: 15px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   letter-spacing: 0.5px;
@@ -110,7 +110,7 @@ const CertificationTitle = styled.h3`
 
 const CertificationItem = styled.span`
   color: #ffffff;
-  font-size: 16px;
+  font-size: 32px;
   display: flex;
   align-items: center;
   margin-bottom: 8px;

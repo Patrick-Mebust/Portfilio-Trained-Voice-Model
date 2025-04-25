@@ -28,7 +28,7 @@ const ContentContainer = styled.div`
 `;
 
 const SectionTitle = styled(motion.h2)`
-  font-size: 32px;
+  font-size: 64px;
   color: #ffffff;
   margin-bottom: 50px;
   position: relative;
@@ -56,7 +56,7 @@ const ContactContent = styled.div`
 
 const ContactText = styled(motion.p)`
   color: #ffffff;
-  font-size: 18px;
+  font-size: 36px;
   text-align: center;
   margin-bottom: 50px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
@@ -77,8 +77,8 @@ const FormGroup = styled.div`
 `;
 
 const Label = styled.label`
-  color: #ccd6f6;
-  font-size: 14px;
+  color: #ffffff;
+  font-size: 28px;
 `;
 
 const Input = styled.input`
@@ -86,8 +86,8 @@ const Input = styled.input`
   background-color: #112240;
   border: 1px solid #233554;
   border-radius: 4px;
-  color: #ccd6f6;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 32px;
   transition: border-color 0.3s ease;
 
   &:focus {
@@ -101,8 +101,8 @@ const TextArea = styled.textarea`
   background-color: #112240;
   border: 1px solid #233554;
   border-radius: 4px;
-  color: #ccd6f6;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 32px;
   min-height: 150px;
   resize: vertical;
   transition: border-color 0.3s ease;
@@ -119,7 +119,7 @@ const SubmitButton = styled(motion.button)`
   color: #64ffda;
   border: 1px solid #64ffda;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 32px;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;

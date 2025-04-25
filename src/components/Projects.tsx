@@ -28,7 +28,7 @@ const ContentContainer = styled.div`
 `;
 
 const SectionTitle = styled(motion.h2)`
-  font-size: 32px;
+  font-size: 64px;
   color: #ffffff;
   margin-bottom: 50px;
   position: relative;
@@ -77,14 +77,14 @@ const ProjectImage = styled.div`
 `;
 
 const ProjectTitle = styled.h3`
-  color: #ccd6f6;
-  font-size: 24px;
+  color: #ffffff;
+  font-size: 48px;
   margin-bottom: 10px;
 `;
 
 const ProjectDescription = styled.p`
-  color: #8892b0;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 32px;
   line-height: 1.6;
   margin-bottom: 20px;
 `;
@@ -98,7 +98,7 @@ const TechStack = styled.div`
 
 const TechItem = styled.span`
   color: #64ffda;
-  font-size: 14px;
+  font-size: 28px;
 `;
 
 const ProjectLinks = styled.div`
@@ -107,9 +107,9 @@ const ProjectLinks = styled.div`
 `;
 
 const ProjectLink = styled.a`
-  color: #ccd6f6;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 28px;
   transition: color 0.3s ease;
 
   &:hover {
@@ -120,20 +120,19 @@ const ProjectLink = styled.a`
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'A brief description of your project and what it does.',
-      tech: ['React', 'TypeScript', 'Node.js'],
-      github: 'https://github.com/yourusername/project1',
-      live: 'https://project1-live-url.com',
+      title: 'V-JEPA AI Model',
+      description: 'A sophisticated implementation of Meta\'s V-JEPA (Vision Joint Embedding Predictive Architecture) model. This project demonstrates advanced computer vision capabilities using self-supervised learning techniques for robust visual understanding.',
+      tech: ['PyTorch', 'CUDA', 'Python', 'Computer Vision', 'Deep Learning'],
+      github: 'https://github.com/Patrick-Mebust/V-JEPA-Project',
+      live: 'https://huggingface.co/spaces/Patrick-Mebust/V-JEPA-Demo'
     },
     {
-      title: 'Project 2',
-      description: 'Another project description highlighting its features and impact.',
-      tech: ['React', 'Firebase', 'Tailwind CSS'],
-      github: 'https://github.com/yourusername/project2',
-      live: 'https://project2-live-url.com',
-    },
-    // Add more projects as needed
+      title: 'Terraform Builder',
+      description: 'An innovative tool that automates the creation and management of cloud infrastructure using Terraform. Features include dynamic template generation, multi-cloud support, and infrastructure validation.',
+      tech: ['Terraform', 'AWS', 'Azure', 'Python', 'Infrastructure as Code'],
+      github: 'https://github.com/Patrick-Mebust/Terraform-Builder',
+      live: 'https://terraform-builder-demo.com'
+    }
   ];
 
   return (
